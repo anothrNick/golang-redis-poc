@@ -1,0 +1,3 @@
+package: github.com/anothrnick/redis-poc
+import:
+  - package: github.com/go-redis/redis

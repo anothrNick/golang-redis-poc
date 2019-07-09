@@ -1,0 +1,16 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
+  api:
+    container_name: api
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "127.0.0.1:5001:5001"
+    links:
+      - redis
